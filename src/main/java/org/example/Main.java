@@ -12,6 +12,7 @@ public class Main {
 
         Function function = new Function();
 
+        System.out.print("Hello world!\n");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.print("Enter the start date to count days from using format yyyy-mm-dd: ");
