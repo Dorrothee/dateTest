@@ -28,4 +28,16 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            // Archive Surefire reports
+            archiveArtifacts('target/surefire-reports/TEST-*.xml')
+        }
+	success {
+                echo "Application testing successfully completed"
+        }
+        failure {
+                echo "Oooppss!!! Tests failed!"
+        }
+    }
 }
